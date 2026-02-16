@@ -69,6 +69,8 @@ static const char *screenshot[]  = { "screenshot", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "librewolf", NULL };
 static const char *email[]  = { "claws-mail", NULL };
+static const char *volup[] = { "sh", "-c", "pactl set-sink-volume @DEFAULT_SINK@ +5%", NULL };
+static const char *voldown[] = { "sh", "-c", "pactl set-sink-volume @DEFAULT_SINK@ -5%", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -88,6 +90,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_space,  zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,	                XK_q,      killclient,     {0} },
+	{ ShiftMask, 	                XK_F2,     spawn,          {.v = volup } },
+	{ ShiftMask, 	                XK_F1,     spawn,          {.v = voldown } },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
