@@ -5,3 +5,5 @@ version of *dwm* this is based off of is v6.4 due to compatibility reasons with
 patches.
 
 # Patches
+
+- [xrdb](https://dwm.suckless.org/patches/xrdb/).
