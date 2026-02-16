@@ -7,3 +7,4 @@ patches.
 # Patches
 
 - [xrdb](https://dwm.suckless.org/patches/xrdb/).
+- [systray](https://dwm.suckless.org/patches/systray/).
