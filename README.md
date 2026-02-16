@@ -10,3 +10,4 @@ patches.
 - [systray](https://dwm.suckless.org/patches/systray/).
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/).
 - [moveresize](https://dwm.suckless.org/patches/moveresize/).
+- [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/).
