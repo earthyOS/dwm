@@ -64,12 +64,20 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
+static const char *fileman[]  = { "st", "ranger", NULL };
+static const char *screenshot[]  = { "screenshot", NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *browser[]  = { "librewolf", NULL };
+static const char *email[]  = { "claws-mail", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = fileman } },
+	{ MODKEY,                       XK_b,      spawn,          {.v = browser } },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = email } },
+	{ 0,                            XK_Print,  spawn,          {.v = screenshot } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
