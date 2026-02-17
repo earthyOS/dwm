@@ -72,6 +72,7 @@ static const char *email[]  = { "claws-mail", NULL };
 static const char *volup[] = { "sh", "-c", "pactl set-sink-volume @DEFAULT_SINK@ +5%", NULL };
 static const char *voldown[] = { "sh", "-c", "pactl set-sink-volume @DEFAULT_SINK@ -5%", NULL };
 static const char *volmute[] = { "sh", "-c", "pactl set-sink-mute @DEFAULT_SINK@ toggle", NULL };
+static const char *micmute[] = { "sh", "-c", "pactl set-source-mute @DEFAULT_SOURCE@ toggle", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -96,6 +97,7 @@ static const Key keys[] = {
 	{ 0,	 	                XF86XK_AudioRaiseVolume,     spawn,          {.v = volup } },
 	{ 0,	 	                XF86XK_AudioLowerVolume,     spawn,          {.v = voldown } },
 	{ 0,	 	                XF86XK_AudioMute,     	     spawn,          {.v = volmute } },
+	{ 0,	 	                XF86XK_AudioMicMute,  	     spawn,          {.v = micmute } },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
