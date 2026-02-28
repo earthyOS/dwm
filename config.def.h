@@ -66,6 +66,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *fileman[]  = { "st", "ranger", NULL };
 static const char *screenshot[]  = { "screenshot", NULL };
+static const char *wallpaper[]  = { "setwallpaper", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "icecat", NULL };
 static const char *email[]  = { "betterbird", NULL };
@@ -81,6 +82,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = fileman } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser } },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = email } },
+	{ MODKEY, 	                XK_F12,    spawn,          {.v = wallpaper } },
 	{ 0,                            XK_Print,  spawn,          {.v = screenshot } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
